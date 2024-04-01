@@ -26,6 +26,7 @@ export async function setup({
   } = await setupENS(option)
   ens = ensInstance
   registrar = registrarInstance
+  console.log('registarrr......................', registrar);
   ensRegistryAddress = ensAddress
   isENSReadyReactive(true)
   return { ens, registrar, providerObject }

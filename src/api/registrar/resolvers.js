@@ -69,7 +69,10 @@ const resolvers = {
   Mutation: {
     async commit(_, { label, secret }) {
       const registrar = getRegistrar()
-      const tx = await registrar.commit(label, secret)
+      console.log('label--------------', label);
+      console.log('secret--------------======', secret);
+      const tx = await registrar.commit('pqweqpwepqwepqwpe', '0x58f4ce9cd7fee313986fb917d2da85eed6723994c7985b7c3bdb6ee8c0b74b01')
+      console.log('hereeeeeeeeeeeeeeeeeeeeeeeeeeeeeee-------------------------');
       return sendHelper(tx)
     },
     async register(_, { label, duration, secret }) {
